@@ -4,7 +4,7 @@ import './globals';
 import "p5/lib/addons/p5.sound";
 import p5 from 'p5';
 
-import songFile from '../assets/guitar_jam1.wav';
+import songFile from '../assets/sliced_vocals2.wav';
 
 function Sketch(props) {
 	const myRef = useRef(null);
@@ -95,7 +95,7 @@ function Sketch(props) {
 			p.fill('#f48037');
 			//p.noStroke();
 			p.stroke(0);
-			p.strokeWeight(p.width / 280);
+			p.strokeWeight(4);
 			p.beginShape();
 			for (let i = 0; i < points.length; i++) {
 				p.vertex(points[i].x * 1.4, -points[i].y * 1.4);
@@ -106,7 +106,7 @@ function Sketch(props) {
 			p.fill('#fafd0f');
 			//p.noStroke();
 			p.stroke(0);
-			p.strokeWeight(p.width / 280);
+			p.strokeWeight(4);
 			p.beginShape();
 			for (let i = 0; i < points.length; i++) {
 				p.vertex(points[i].x, points[i].y);
@@ -120,7 +120,7 @@ function Sketch(props) {
 				p.text('😐', 0,48);
 			} else if(avgAmp <19) {
 				p.text('😮', 0,48);
-			} else if(avgAmp <26) {
+			} else if(avgAmp <34) {
 				p.text('😲', 0,48);
 			} else {
 				p.text('😵', 0,48);
